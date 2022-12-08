@@ -9,6 +9,9 @@ const INITIAL_STYATE = {
 };
 
 class ContactForm extends Component {
+  static defaultProps = {
+    onAdd: 'stranger',
+  };
   state = INITIAL_STYATE;
 
   handleChangeForm = ({ target }) => {
@@ -81,9 +84,5 @@ class ContactForm extends Component {
     );
   }
 }
-
-ContactForm.propTypes = {
-  onAdd: PropTypes.func.isRequired,
-};
 
 export default ContactForm;
